@@ -1,168 +1,91 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile Card</title>
-    <style>
-        /* আপনার খাওয়া-দাওয়ার পরের সেই সুন্দর ও পারফেক্ট ডিজাইন, যার স্পেসিং ও ফন্ট সাইজ একদম ঠিক আছে */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .profile-container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-
-        /* ফটো কন্টেনার */
-        .photo-box {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            overflow: hidden;
-            border: 3px solid #007bff;
-            background-color: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .photo-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* অ্যানিমেশন টেক্সট */
-        .animated-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* মিডিল কন্টেনার */
-        .middle-container {
-            margin: 20px 0;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            font-size: 16px;
-            color: #555;
-        }
-
-        /* ক্লিক টু কল কন্টেনার */
-        .call-container {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .call-btn {
-            display: inline-block;
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .call-btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* কিউআর কোড কন্টেনার */
-        .qr-container {
-            margin-top: 25px;
-            padding: 15px;
-            border: 2px dashed #ccc;
-            border-radius: 10px;
-            background: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .qr-box {
-            width: 180px;
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f8f9fa;
-        }
-
-        .qr-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .qr-text {
-            margin-top: 8px;
-            font-size: 14px;
-            color: #666;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="profile-container">
-        
-        <!-- ১. ফটো সেকশন (এখন সরাসরি অনলাইন ছবি দেখাবে) -->
-        <div class="photo-box">
-            <img src="https://unsplash.com" alt="Profile Photo">
-        </div>
-
-        <!-- অ্যানিমেশন টেক্সট -->
-        <div class="animated-text">আপনার নাম এখানে</div>
-
-        <!-- মিডিল কন্টেনার টেক্সট -->
-        <div class="middle-container">
-            এখানে আপনার অন্যান্য প্রয়োজনীয় তথ্য বা সুন্দর বিবরণ রয়েছে।
-        </div>
-
-        <!-- ক্লিক টু কল সেকশন (দুটো নম্বরই এখানে বসানো আছে) -->
-        <div class="call-container">
-            <a href="tel:+919775116933" class="call-btn">📞 কল করুন: নম্বর ১</a>
-            <a href="tel:+917063320748" class="call-btn">📞 কল করুন: নম্বর ২</a>
-        </div>
-
-        <!-- ২. কিউআর কোড সেকশন (লাইভ অনলাইন QR কোড আসবে) -->
-        <div class="qr-container">
-            <div class="qr-box">
-                <img src="https://qrserver.com" alt="QR Code">
+<div id="premium-sig-root" style="max-width: 440px; width: 100%; margin: 0 auto; background: #ffffff; padding: 30px 22px 20px 22px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); font-family: 'Segoe UI', system-ui, sans-serif; border: 1px solid #eaeaea; box-sizing: border-box; text-align: center;">
+  
+  <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto; vertical-align: -webkit-baseline-middle; border-collapse: collapse; text-align: center;">
+    <tbody>
+      <!-- ১. উপরে ১০০% সেন্টারড কালো কন্টেইনার (অ্যানিমেশন ঠিক আছে) -->
+      <tr>
+        <td colspan="2" style="padding: 0 0 25px 0; text-align: center;">
+          <div style="width: 100%; height: 56px; background: #000000; border-radius: 8px; overflow: hidden; display: flex; align-items: center; position: relative; box-shadow: inset 0 0 10px rgba(255,255,255,0.15); margin: 0 auto;">
+            <div style="position: absolute; white-space: nowrap; font-size: 19px; font-weight: 700; color: #ffdf00; letter-spacing: 0.8px; animation: instantLoop 20s infinite linear; padding-left: 100%;">
+              ★ Mr. Asim Krishna Roy ✿ <span style="color: #ffffff;">★ Online Marketing Specialist ✿</span> <span style="color: #a7f3d0; font-style: italic; font-weight: 800;">★ Clickable Email Signature with Digital Business Card ✿</span>
             </div>
-            <div class="qr-text">স্ক্যান করুন</div>
-        </div>
+          </div>
+          <style>
+            @keyframes instantLoop {
+              0% { transform: translateX(0%); }
+              100% { transform: translateX(-100%); }
+            }
+            @keyframes textShine {
+              0% { background-position: 250% center; }
+              100% { background-position: -250% center; }
+            }
+          </style>
+        </td>
+      </tr>
 
-    </div>
+      <!-- ২. মাঝখানের কন্টেইনার: টেক্সটের সাইজ এবং ফটো লেয়ার -->
+      <tr>
+        <td colspan="2" style="padding: 0 0 15px 0; text-align: center;">
+          <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
+            <tbody>
+              <tr>
+                <!-- বাম দিকে আপনার প্রফেশনাল ফটো -->
+                <td style="width: 105px; vertical-align: middle; text-align: left;">
+                  <div style="width: 92px; height: 92px; border-radius: 50%; border: 2.5px solid #000000; overflow: hidden; background: #fafafa; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <img src="https://postimg.cc" alt="Mr. Asim Krishna Roy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                  </div>
+                </td>
+                <!-- ডানপাশে টেক্সট লেয়ার -->
+                <td style="vertical-align: middle; padding-left: 20px; text-align: left;">
+                  <h3 style="margin: 0 0 10px 0; color: #000000; font-size: 27px; font-weight: 700; letter-spacing: 0.3px; line-height: 1.2;">Mr. Asim Krishna Roy</h3>
+                  <p style="margin: 0 0 12px 0; color: #0284c7; font-size: 19px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; line-height: 1.2;">Online Marketing Specialist</p>
+                  <p class="glowing-service-text" style="margin: 0; font-size: 19px; line-height: 1.4; font-weight: 800; letter-spacing: 0.1px; background: linear-gradient(90deg, #111111 0%, #111111 25%, #00f2fe 45%, #ffffff 50%, #00f2fe 55%, #111111 75%, #111111 100%); background-size: 250% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: textShine 3s linear infinite;">
+                    Clickable Email Signature with Digital Business Card
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- ৩. নিচের রো: ২ট নম্বরের ডাইরেক্ট বাটন এবং কিউআর কোড (সামান্য উপরের দিকে উঠানো হয়েছে) -->
+      <tr>
+        <td style="border-top: 1px dashed #e5e7eb; padding: 15px 0 15px 0; text-align: left; vertical-align: middle;">
+          <div style="font-size: 13px; font-weight: 700; color: #555555; margin-bottom: 8px;">📞 Click to Call:</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="tel:+919775116933" style="display: inline-flex; align-items: center; justify-content: center; background: #000000; color: #ffffff; text-decoration: none; padding: 10px 18px; font-size: 13.5px; font-weight: 700; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+               Main No
+            </a>
+            <a href="tel:+917063320748" style="display: inline-flex; align-items: center; justify-content: center; background: #0284c7; color: #ffffff; text-decoration: none; padding: 10px 18px; font-size: 13.5px; font-weight: 700; border-radius: 20px; box-shadow: 0 4px 12px rgba(2,132,199,0.15);">
+               Second No
+            </a>
+          </div>
+        </td>
+        <td style="border-top: 1px dashed #e5e7eb; padding: 15px 15px 15px 0; text-align: right; vertical-align: middle; width: 90px;">
+          <div style="width: 76px; height: 76px; padding: 3px; border: 1.5px solid #000000; border-radius: 8px; background: #ffffff; display: inline-block; box-shadow: 0 3px 8px rgba(0,0,0,0.06); box-sizing: border-box;">
+            <img src="https://qrserver.com" alt="QR Code" style="width: 100%; height: 100%; display: block;">
+          </div>
+        </td>
+      </tr>
 
-</body>
-</html>
+      <!-- ৪. নিচে যুক্ত করা চমকপ্রদ চারকোল ব্ল্যাক কন্টেইনার -->
+      <tr>
+        <td colspan="2" style="padding: 15px 0 0 0; text-align: center;">
+          <div style="width: 100%; height: 48px; background: #1e293b; border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(30,41,59,0.2); margin: 0 auto;">
+            <p style="margin: 0; color: #ffdf00; font-size: 14px; font-weight: 700; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; height: 100%; animation: pulseText 2s infinite;">
+              <span>✨</span> GLOBAL MARKETING HUB <span>✨</span>
+            </p>
+          </div>
+          <style>
+            @keyframes pulseText {
+              0% { opacity: 0.9; }
+              50% { opacity: 1; text-shadow: 0 0 8px rgba(255,223,0,0.6); }
+              100% { opacity: 0.9; }
+            }
+          </style>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
