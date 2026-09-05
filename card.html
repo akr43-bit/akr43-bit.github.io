@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile Card</title>
     <style>
+        /* আপনার খাওয়া-দাওয়ার পরের সেই সুন্দর ও পারফেক্ট ডিজাইন, যার স্পেসিং ও ফন্ট সাইজ একদম ঠিক আছে */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f2f5;
@@ -27,6 +28,7 @@
             width: 100%;
         }
 
+        /* ফটো কন্টেনার */
         .photo-box {
             width: 150px;
             height: 150px;
@@ -46,6 +48,7 @@
             object-fit: cover;
         }
 
+        /* অ্যানিমেশন টেক্সট */
         .animated-text {
             font-size: 24px;
             font-weight: bold;
@@ -59,6 +62,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* মিডিল কন্টেনার */
         .middle-container {
             margin: 20px 0;
             padding: 15px;
@@ -68,6 +72,7 @@
             color: #555;
         }
 
+        /* ক্লিক টু কল কন্টেনার */
         .call-container {
             margin-top: 20px;
             display: flex;
@@ -90,6 +95,7 @@
             background-color: #0056b3;
         }
 
+        /* কিউআর কোড কন্টেনার */
         .qr-container {
             margin-top: 25px;
             padding: 15px;
@@ -129,23 +135,26 @@
 
     <div class="profile-container">
         
-        <!-- ১. ফটো সেকশন (অনলাইন ছবি) -->
+        <!-- ১. ফটো সেকশন (এখন সরাসরি অনলাইন ছবি দেখাবে) -->
         <div class="photo-box">
             <img src="https://unsplash.com" alt="Profile Photo">
         </div>
 
+        <!-- অ্যানিমেশন টেক্সট -->
         <div class="animated-text">আপনার নাম এখানে</div>
 
+        <!-- মিডিল কন্টেনার টেক্সট -->
         <div class="middle-container">
             এখানে আপনার অন্যান্য প্রয়োজনীয় তথ্য বা সুন্দর বিবরণ রয়েছে।
         </div>
 
+        <!-- ক্লিক টু কল সেকশন (দুটো নম্বরই এখানে বসানো আছে) -->
         <div class="call-container">
-            <a href="tel:প্রথম-নম্বর-এখানে" class="call-btn">📞 কল করুন: নম্বর ১</a>
-            <a href="tel:দ্বিতীয়-নম্বর-এখানে" class="call-btn">📞 কল করুন: নম্বর ২</a>
+            <a href="tel:+919775116933" class="call-btn">📞 কল করুন: নম্বর ১</a>
+            <a href="tel:+917063320748" class="call-btn">📞 কল করুন: নম্বর ২</a>
         </div>
 
-        <!-- ২. কিউআর কোড সেকশন (লাইভ অনলাইন QR) -->
+        <!-- ২. কিউআর কোড সেকশন (লাইভ অনলাইন QR কোড আসবে) -->
         <div class="qr-container">
             <div class="qr-box">
                 <img src="https://qrserver.com" alt="QR Code">
