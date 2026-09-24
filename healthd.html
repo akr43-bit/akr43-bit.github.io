@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Asim Krishna Roy - Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 15px;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffd700;
+            box-shadow: 0 0 15px #ffd700;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #ffd700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #e0e0e0;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .links-area {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .shop-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #0f2027;
+            background: linear-gradient(90deg, #ffe259, #ffa751);
+            text-decoration: none;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+        }
+        
+        /* হিরের আলোর মোলায়েম সুইপ ও তাৎক্ষণিক ওভারল্যাপ লুপ */
+        .shop-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -60%;
+            width: 50%;
+            height: 100%;
+            /* আপনার পছন্দের পার্পল, পিঙ্ক ও উজ্জ্বল হোয়াইট হিরের আলোর প্রিমিয়াম কম্বিনেশন */
+            background: linear-gradient(
+                90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 182, 193, 0.35) 25%, 
+                rgba(255, 255, 255, 0.9) 50%, 
+                rgba(230, 190, 255, 0.35) 75%, 
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-25deg);
+            /* লুপের মোট সময় ১.৪ সেকেন্ড রাখা হয়েছে, যাতে আপনার পছন্দের স্পিড ঠিক থাকে এবং ডান দিকে মিলানোর আগেই বাম থেকে নতুন আলো চলে আসে */
+            animation: diamondGlow 1.4s infinite linear;
+        }
+        
+        .shop-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* আলো বাটনের ডান সীমানা পার হতে না হতেই বাম দিক থেকে আবার শুরু হওয়ার নিখুঁত সমীকরণ */
+        @keyframes diamondGlow {
+            0% {
+                left: -60%;
+            }
+            100% {
+                left: 110%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- প্রোফাইল ফটো বক্স -->
+        <img class="profile-img" src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png" alt="Mr. Asim Krishna Roy">
+        
+        <!-- আপনার নাম ও পদবী -->
+        <h1>Mr. Asim Krishna Roy</h1>
+        <div class="subtitle">Online Marketing Specialist</div>
+        
+        <!-- ১৭টি সচল শপিং সাইটের গোল্ডেন বাটন লিংক -->
+        <div class="links-area">
+            <a class="shop-btn" href="https://sites.google.com/view/best-dealing-shop-h/home" target="_blank">Best Dealing Shop - H</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-dealing-shop-i/home" target="_blank">Best Dealing Shop - I</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-dealing-shop-j/home" target="_blank">Best Dealing Shop - J</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-shopping-site-k/home" target="_blank">Best Shopping Site - K</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-shopping-site-l/home" target="_blank">Best Shopping Site - L</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-dealing-shop-m/home" target="_blank">Best Dealing Shop - M</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-dealing-shop-n/home" target="_blank">Best Dealing Shop - N</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-shopping-site-n/home" target="_blank">Best Shopping Site - N (All)</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-shopping-site-i/home" target="_blank">Best Shopping Site - I</a>
+            <a class="shop-btn" href="https://sites.google.com/view/bestshoppingsite2b/home" target="_blank">Best Shopping Site - 2B</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-dealing-shop-g/home" target="_blank">Best Shopping Site - 11</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-shopping-site2d/home" target="_blank">Best Shopping Site - 12</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-dealing-shop-l/home" target="_blank">Best Shopping Site - 13</a>
+            <a class="shop-btn" href="https://sites.google.com/view/bestdealingshop1b/home" target="_blank">Best Shopping Site - 14</a>
+            <a class="shop-btn" href="https://sites.google.com/view/bestdealingshop1c/home" target="_blank">Best Shopping Site - 15</a>
+            <a class="shop-btn" href="https://sites.google.com/view/bestshopingsite2c/home" target="_blank">Best Shopping Site - 16</a>
+            <a class="shop-btn" href="https://sites.google.com/view/best-shopping-site-f/home" target="_blank">Best Shopping Site - 17</a>
+        </div>
+    </div>
+
+</body>
+</html>
