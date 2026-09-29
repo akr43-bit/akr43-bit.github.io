@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Digital Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0f0c20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* মূল গ্লোবাল কন্টেনার */
+        .profile-card {
+            background: linear-gradient(135deg, #15102a, #1b153a);
+            border: 2px solid #3d2b5c;
+            border-radius: 20px;
+            padding: 35px 25px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* প্রোফাইল ফটো ফ্রেম ও গ্লোয়িং এফেক্ট */
+        .photo-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(45deg, #ff007f, #7f00ff);
+            box-shadow: 0 0 20px rgba(127, 0, 255, 0.4);
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #251f47;
+            display: block;
+        }
+
+        /* নাম এবং ডেজিগনেশন স্টাইল */
+        .user-name {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .designation-box {
+            background: rgba(127, 0, 255, 0.1);
+            border: 1px solid rgba(127, 0, 255, 0.3);
+            border-radius: 30px;
+            padding: 6px 15px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .designation-text {
+            color: #d1c4e9;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        /* প্রিমিয়াম অ্যাকশন বাটন এবং লাইট সুইপ অ্যানিমেশন */
+        .cta-button {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 30px;
+            background: linear-gradient(90deg, #7f00ff, #ff007f);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 20px rgba(255, 0, 127, 0.3);
+            transition: transform 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        /* পার্পেল, পিঙ্ক ও হোয়াইট প্রিমিয়াম লাইট সুইপ এফেক্ট */
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 30%,
+                rgba(255, 0, 127, 0.4) 60%,
+                rgba(127, 0, 255, 0) 100%
+            );
+            transform: skewX(-25deg);
+            animation: sweepEffect 3s infinite linear;
+        }
+
+        @keyframes sweepEffect {
+            0% { left: -100%; }
+            30% { left: 150%; }
+            100% { left: 150%; }
+        }
+
+        /* আন্তর্জাতিক নিয়মের ফুটার ডিসক্লেইমার */
+        .disclaimer-container {
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 20px;
+            text-align: justify;
+        }
+
+        .disclaimer-text {
+            color: #b3a9c9;
+            font-size: 12px;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        
+        <div class="photo-container">
+            <img class="profile-photo" src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png" alt="Mr. Asim Krishna Roy">
+        </div>
+
+        <h1 class="user-name">Mr. Asim Krishna Roy</h1>
+        
+        <div class="designation-box">
+            <span class="designation-text">Online Marketing Specialist & Affiliate Marketer</span>
+        </div>
+
+        <!-- এখানে বোতামের লিঙ্কটি সরাসরি বড় পোর্টফোলিও পেজের (index.html) সাথে যুক্ত করে দেওয়া হলো -->
+        <a href="index.html" class="cta-button">View Certified Product Catalog</a>
+
+        <div class="disclaimer-container">
+            <p class="disclaimer-text">
+                Disclaimer: As an Online Marketing Specialist & Affiliate Marketer, I showcase and promote high-quality offers. Clicking the action button will securely guide you to our certified product catalog. All sales and order transactions are safely processed by Digistore24.com.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
