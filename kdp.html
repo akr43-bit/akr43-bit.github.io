@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Clickable Email Signature</title>
+    <style>
+        /* সার্বিক লাক্সারি ও রিসেট সেটিংস */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #08090a;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* আল্ট্রা-লাক্সারি সিগনেচার কন্টেইনার */
+        .signature-card {
+            background: linear-gradient(145deg, #11141a 0%, #1a1f2c 100%);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        /* প্রোফাইল সেকশন */
+        .profile-section {
+            margin-bottom: 25px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .user-name {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .user-designation {
+            font-size: 13px;
+            color: #d4af37;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* বাটন এরিয়া ও লেআউট */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* প্রিমিয়াম বাটন বেস */
+        .premium-btn {
+            position: relative;
+            background: #0d0f13;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 14px 20px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* মেটিওর / শুটিং স্টার লাইট সুইপ ইফেক্ট */
+        .premium-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.25) 50%, 
+                rgba(238, 130, 238, 0.25) 75%, 
+                rgba(255, 255, 255, 0) 100%
+            ); /* সাদা এবং বেগুনি মিশ্রিত শুটিং স্টার আলো */
+            transform: skewX(-25deg);
+            animation: meteorSweep 4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* বাটনের হোভার ইফেক্ট */
+        .premium-btn:hover {
+            border-color: #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* কেডিপি বুক বাটন স্পেশাল স্টাইল */
+        .kdp-btn {
+            color: #d4af37;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* মিউজিক বাটন স্পেশাল স্টাইল */
+        .music-btn {
+            color: #66fcf1;
+            border: 1px solid rgba(102, 252, 241, 0.3);
+        }
+
+        /* শুটিং স্টার অ্যানিমেশন টাইমলাইন */
+        @keyframes meteorSweep {
+            0% {
+                left: -150%;
+            }
+            30% {
+                left: 150%;
+            }
+            100% {
+                left: 150%;
+            }
+        }
+
+        /* ফুটার মেসেজ সেকশন */
+        .footer-link {
+            font-size: 12px;
+            color: #b3b9c1;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: #d4af37;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signature-card">
+        <!-- প্রোফাইল সেকশন -->
+        <div class="profile-section">
+            <!-- আপনার প্রোফাইল ফটোর লিংকটি src="" এর ভেতরে বসাবেন -->
+            <img src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png" alt="Profile Image" class="profile-img">
+            <div class="user-name">Mr. Asim Krishna Roy</div>
+            <div class="user-designation">Global Online Marketing Specialist</div>
+        </div>
+
+        <!-- অ্যাকশন বাটন সেকশন -->
+        <div class="button-container">
+            <!-- ১. আপনার বিজ্ঞাপন-মুক্ত পার্টিকুলার Amazon KDP বইয়ের লিংকটি নিচে href-এ বসাবেন -->
+            <a href="https://www.amazon.com.be/Livres-Mr-Asim-Krishna-Roy/s?rh=n%3A27156140031%2Cp_27%3AMr%2BAsim%2BKrishna%2BRoy" target="_blank" class="premium-btn kdp-btn">
+                Explore KDP Book Collection
+            </a>
+
+            <!-- ২. আপনার মেডিটেশন মিউজিকের (যেমন: গুগল ড্রাইভ বা অন্য সোর্স) লিংকটি নিচে href-এ বসাবেন -->
+            <a href="https://drive.google.com/file/d/1-BjooIfe3M_GuJR2XJpjPReicYaOdCeH/view?usp=drivesdk" target="_blank" class="premium-btn music-btn">
+                Listen Meditation Music
+            </a>
+        </div>
+
+        <!-- যোগাযোগের একমাত্র মাধ্যম (শুধুমাত্র ইমেইল আইডি) -->
+        <a href="mailto:asimkroy43@gmail.com" class="footer-link">
+            Contact: asimkroy43@gmail.com
+        </a>
+    </div>
+
+</body>
+</html>
