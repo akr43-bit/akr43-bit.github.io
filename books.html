@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Publisher - Global Premium</title>
+    <style>
+        /* সার্বিক লাক্সারি ও রেসপনসিভ সেটআপ */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #08090a; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; overflow-x: hidden; }
+        
+        /* আল্ট্রা-লাক্সারি কন্টেইনার (বিশুদ্ধ ডার্ক থিম, পিওর ব্ল্যাক এড়ানো হয়েছে) */
+        .luxury-portal-card { background: linear-gradient(145deg, #11141a 0%, #1a1f2c 100%); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 16px; padding: 35px 25px; width: 100%; max-width: 450px; text-align: center; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6); }
+        
+        /* ল্যাঙ্গুয়েজ সুইচিং টেক্সট স্টাইল (ওয়ার্ড স্পেসিং সম্পূর্ণ স্বাভাবিক) */
+        .lang-text { display: none; font-size: 13.5px; color: #b3b9c1; line-height: 1.7; margin: 0; font-weight: 400; letter-spacing: 0.3px; text-align: center; width: 100%; }
+        
+        /* Pure CSS মেকানিজম (কোনো জাভাস্ক্রিপ্ট ছাড়াই ভাষা পরিবর্তন হবে) */
+        #show-bn:checked ~ #text-bn { display: block; }
+        #show-en:checked ~ #text-en { display: block; }
+        #show-hi:checked ~ #text-hi { display: block; }
+        #show-es:checked ~ #text-es { display: block; }
+        #show-fr:checked ~ #text-fr { display: block; }
+        #show-de:checked ~ #text-de { display: block; }
+        
+        .lang-menu-box { display: none; width: 100%; margin-top: 15px; padding: 12px; background: #08090a; border: 1px solid rgba(214, 175, 55, 0.3); border-radius: 8px; text-align: left; box-sizing: border-box; }
+        #toggle-lang-menu:checked ~ #global-lang-panel { display: block; }
+        
+        .lang-trigger-label:hover { color: #ffffff !important; text-shadow: 0 0 5px rgba(102, 252, 241, 0.5); }
+        .grid-lang-item:hover { background: rgba(214, 175, 55, 0.1); border-radius: 4px; }
+
+        /* ১. কেডিপি পোর্টফোলিও বাটন স্টাইল (বাটনটি এক চুল নিচে নামানো হয়েছে) */
+        .portfolio-btn { background: #d4af37; color: #11141a; padding: 14px 48px; font-size: 13px; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 30px; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 35px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(212,175,55,0.3); border: 2px solid #d4af37; }
+        .portfolio-btn:hover { background: transparent; color: #d4af37; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+
+        /* ২. কন্টাক্ট ইমেইল বাটন স্টাইল */
+        .email-btn { background: transparent; color: #d4af37; border: 2px solid rgba(214, 175, 55, 0.6); padding: 12px 48px; font-size: 13px; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 30px; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 12px; transition: all 0.3s ease; }
+        .email-btn:hover { border-color: #d4af37; color: #ffffff; background: rgba(214, 175, 55, 0.05); }
+    </style>
+</head>
+<body>
+
+    <div class="luxury-portal-card">
+        
+        <!-- ১. হেডিং -->
+        <div style="width: 100%; font-size: 13px; color: #d4af37; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid rgba(214, 175, 55, 0.2); padding-bottom: 10px; text-align: left; margin-bottom: 20px;">
+            About the Publisher
+        </div>
+        
+        <!-- ২. পাবলিশারের প্রিমিয়াম ফটো -->
+        <div style="margin: 0 auto 20px auto; width: 95px; height: 95px; border-radius: 50%; border: 2px solid #d4af37; padding: 3px; background: #0e1117; box-shadow: 0 4px 15px rgba(212,175,55,0.2); overflow: hidden;">
+            <img src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png" alt="Asim Krishna Roy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+        </div>
+
+        <!-- ৩. কাস্টম নো-জাভাস্ক্রিপ্ট টেক্সট সুইচিং কন্টেইনার -->
+        <div class="translation-wrapper" style="width: 100%;">
+            <!-- হিডেন কন্ট্রোলার -->
+            <input type="radio" id="show-bn" name="lang-toggle" checked style="display:none;">
+            <input type="radio" id="show-en" name="lang-toggle" style="display:none;">
+            <input type="radio" id="show-hi" name="lang-toggle" style="display:none;">
+            <input type="radio" id="show-es" name="lang-toggle" style="display:none;">
+            <input type="radio" id="show-fr" name="lang-toggle" style="display:none;">
+            <input type="radio" id="show-de" name="lang-toggle" style="display:none;">
+            <input type="checkbox" id="toggle-lang-menu" style="display:none;">
+
+            <!-- ৬টি ভাষার টেক্সট -->
+            <p id="text-bn" class="lang-text">
+                নমস্কার, আমি অসিম কৃষ্ণ রায়। একজন অনলাইন marketing স্পেশালিস্ট এবং অ্যামাজন কেডিপি (KDP) প্ল্যাটফর্মের একজন স্বাধীন বই প্রকাশক। আমি মূলত মনকে শান্ত ও চাপমুক্ত করার জন্য বিভিন্ন ধরনের স্পিরিচুয়াল রিল্যাক্সেশন এবং ক্রিয়েティブ কালারিং বুক তৈরি ও প্রকাশ করে আসছি। আন্তর্জাতিক মানের ডিজাইন এবং নিখুঁত কাজের মাধ্যমে পাঠকদের কাছে পরম শান্তি ও সৃজনশীলতা পৌঁছে দেওয়াই আমার মূল লক্ষ্য।
+            </p>
+            <p id="text-en" class="lang-text">
+                Hello, I am Asim Krishna Roy. An Online Marketing Specialist and an independent book publisher on the Amazon KDP platform. I primarily create and publish various types of spiritual relaxation and creative coloring books to calm the mind and relieve stress. My main goal is to deliver ultimate peace and creativity to readers through international standard designs and flawless execution.
+            </p>
+            <p id="text-hi" class="lang-text">
+                नमस्कार, मैं असीम कृष्ण रॉय हूं। एक ऑनलाइन मार्केटिंग स्पेशलिस्ट और अमेज़न केडीपी (KDP) प्लेटफॉर्म पर एक स्वतंत्र पुस्तक प्रकाशक। मैं मुख्य रूप से मन को शांत करने और तनाव दूर करने के लिए विभिन्न प्रकार की आध्यात्मिक विश्राम और रचनात्मक रंग भरने वाली पुस्तकें बनाता और प्रकाशित करता हूँ। अंतर्राष्ट्रीय स्तर के डिज़ाइन और त्रुटिहीन काम के माध्यम से पाठकों तक परम शांति और रचनात्मकता पहुँचाना मुख्य लक्ष्य है।
+            </p>
+            <p id="text-es" class="lang-text">
+                Hola, soy Asim Krishna Roy. Especialista en marketing online y editor de libros independiente en la plataforma Amazon KDP. Creo y publico principalmente varios tipos de libros de relajación espiritual y coloreado creativo para calmar la mente y aliviar el estrés.
+            </p>
+            <p id="text-fr" class="lang-text">
+                Bonjour, je suis Asim Krishna Roy. Spécialiste du marketing en línea y éditeur de livres indépendant sur la plateforme Amazon KDP. Je crée et publie principalement divers types de livres de relaxation spirituelle et de coloriage créatif pour apaiser l'esprit et soulager le stress.
+            </p>
+            <p id="text-de" class="lang-text">
+                Hallo, ich bin Asim Krishna Roy. Ein Online-Marketing-Spezialist und unabhängiger Buchverleger auf der Amazon KDP-Plattform. Ich erstelle und veröffentliche hauptsächlich verschiedene Arten von spirituellen Entspannungs- und kreativen Malbüchern, um den Geist zu beruhigen und Stress abzubauen.
+            </p>
+
+            <!-- ৪. ট্রান্সলেট ট্রিগার বাটন সমূহ -->
+            <div style="display: flex; gap: 20px; justify-content: center; width: 100%; margin-top: 18px; border-top: 1px solid rgba(255,255,255,0.03); padding-top: 12px;">
+                <label for="show-en" class="lang-trigger-label" style="color: #66fcf1; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; font-size: 12px; padding: 5px; transition: color 0.2s;">
+                    Translate to English
+                </label>
+                <label for="toggle-lang-menu" class="lang-trigger-label" style="color: #66fcf1; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; font-size: 12px; padding: 5px; transition: color 0.2s;">
+                    Translate to Any Language
+                </label>
+            </div>
+
+            <!-- গ্লোবাল ল্যাঙ্গুয়েজ সিলেকশন প্যানেল -->
+            <div id="global-lang-panel" class="lang-menu-box">
+                <div style="font-size: 11px; color: #8892b0; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Select Global Language:</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                    <label for="show-en" class="grid-lang-item" style="color: #66fcf1; font-size: 12px; cursor: pointer; padding: 6px; font-weight: 500; display: block;">English</label>
+                    <label for="show-hi" class="grid-lang-item" style="color: #ffffff; font-size: 12px; cursor: pointer; padding: 6px; display: block;">Hindi (हिंदी)</label>
+                    <label for="show-es" class="grid-lang-item" style="color: #ffffff; font-size: 12px; cursor: pointer; padding: 6px; display: block;">Spanish (Español)</label>
+                    <label for="show-fr" class="grid-lang-item" style="color: #ffffff; font-size: 12px; cursor: pointer; padding: 6px; display: block;">French (Français)</label>
+                    <label for="show-de" class="grid-lang-item" style="color: #ffffff; font-size: 12px; cursor: pointer; padding: 6px; display: block;">German (Deutsch)</label>
+                    <label for="show-bn" class="grid-lang-item" style="color: #d4af37; font-size: 12px; cursor: pointer; padding: 6px; font-weight: bold; display: block;">Bengali (বাংলা)</label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ৫. কেডিপি পোর্টফোলিওর ডাইরেক্ট বাটন -->
+        <div>
+            <a href="https://akr43-bit.github.io/kdp.html" class="portfolio-btn">View KDP Portfolio</a>
+        </div>
+
+        <!-- ৬. কন্টাক্ট ইমেইল বাটন -->
+        <div>
+            <a href="mailto:asimkroy43@gmail.com" class="email-btn">Contact via Email</a>
+        </div>
+
