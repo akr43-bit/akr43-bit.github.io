@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Clickable Email Signature - Asim Krishna Roy</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px 10px;
+  background: #f4f7f6;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+#premium-sig-root {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #eaeaea;
+  text-align: center;
+}
+
+/* Top black banner */
+.top-banner {
+  width: 92%;
+  height: 60px;
+  background: #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.15);
+  margin: 0 auto 18px;
+}
+
+.banner-text {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffdf00;
+  letter-spacing: 0.8px;
+  animation: instantLoop 20s infinite linear;
+  padding-left: 100%;
+}
+
+@keyframes instantLoop {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Profile */
+.profile-table {
+  width: 100%;
+  margin: 0 auto 18px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.photo-cell {
+  width: 85px;
+  vertical-align: middle;
+}
+
+.profile-photo {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 2.5px solid #000000;
+  background: #fafafa;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  object-fit: cover;
+  display: block;
+}
+
+.profile-info {
+  vertical-align: middle;
+  padding-left: 14px;
+  overflow-wrap: anywhere;
+}
+
+.profile-info h3 {
+  margin: 0 0 4px;
+  color: #000000;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+}
+
+.job-title {
+  margin: 0 0 6px;
+  color: #0284c7;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.glowing-service-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: 0.1px;
+  background: linear-gradient(
+    90deg,
+    #111111 0%,
+    #111111 25%,
+    #00f2fe 45%,
+    #ffffff 50%,
+    #00f2fe 55%,
+    #111111 75%,
+    #111111 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 3s linear infinite;
+}
+
+@keyframes textShine {
+  0% { background-position: 250% center; }
+  100% { background-position: -250% center; }
+}
+
+/* Call, Taj Mahal and QR layout */
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 0;
+}
+
+.contact-cell,
+.taj-cell,
+.qr-cell {
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 18px;
+  vertical-align: middle;
+}
+
+.contact-cell {
+  width: 40%;
+  text-align: left;
+  padding-right: 4px;
+}
+
+.taj-cell {
+  width: 30%;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.qr-cell {
+  width: 30%;
+  text-align: right;
+  padding-left: 4px;
+}
+
+.call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 11px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 25px;
+  letter-spacing: 0.1px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.call-btn:hover {
+  background: #263238;
+}
+
+/* Taj Mahal */
+.taj-image {
+  display: block;
+  width: 72px;
+  max-width: 100%;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 7px;
+  border: 1px solid #ddd;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 10px;
+}
+
+/* QR placeholder: text only */
+.qr-frame {
+  width: 56px;
+  height: 56px;
+  padding: 3px;
+  border: 1.5px solid #000000;
+  border-radius: 8px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+
+.qr-label {
+  color: #111111;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+/* Bottom charcoal container */
+.portfolio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92%;
+  height: 60px;
+  margin: 30px auto 0;
+  padding: 7px 6px;
+  background: #1e293b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(30,41,59,0.25);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Portfolio button: width 80%, height 40px */
+.portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#6e8efb,#a777e3);
+  color: #ffffff;
+  text-decoration: none;
+  height: 40px;
+  min-height: 40px;
+  width: 80%;
+  padding: 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(110,142,251,0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.portfolio-btn span {
+  word-spacing: 3px;
+  margin-right: 4px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background: linear-gradient(135deg,#a777e3,#6e8efb);
+  box-shadow: 0 6px 20px rgba(167,119,227,0.6);
+  transform: translateY(-2px);
+}
+
+.portfolio-btn:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+.portfolio-btn:hover span {
+  transform: translateX(-2px);
+}
+
+.portfolio-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(110,142,251,0.4);
+}
+
+/* Small-screen adjustments */
+@media (max-width: 360px) {
+  #premium-sig-root {
+    padding: 14px;
+  }
+
+  .profile-info h3 {
+    font-size: 18px;
+  }
+
+  .profile-info {
+    padding-left: 10px;
+  }
+
+  .photo-cell {
+    width: 80px;
+  }
+
+  .contact-cell {
+    width: 40%;
+  }
+
+  .taj-cell {
+    width: 30%;
+  }
+
+  .qr-cell {
+    width: 30%;
+  }
+
+  .call-btn {
+    padding: 10px 5px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .taj-image {
+    width: 56px;
+    height: 42px;
+    left: 10px;
+  }
+
+  .qr-frame {
+    width: 48px;
+    height: 48px;
+  }
+
+  .qr-label {
+    font-size: 8px;
+  }
+
+  .top-banner {
+    width: 92%;
+    height: 60px;
+  }
+
+  .portfolio-container {
+    width: 92%;
+    height: 60px;
+    margin-top: 30px;
+    padding: 7px 5px;
+  }
+
+  .portfolio-btn {
+    height: 40px;
+    min-height: 40px;
+    width: 80%;
+    padding: 0 3px;
+    font-size: 12px;
+  }
+
+  .portfolio-btn span {
+    word-spacing: 3px;
+    margin-right: 3px;
+  }
+
+  .arrow-icon {
+    width: 17px;
+    height: 17px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div id="premium-sig-root">
+
+  <!-- 1. Animated black banner -->
+  <div class="top-banner">
+    <div class="banner-text">
+      ★ Mr. Asim Krishna Roy ✿
+      <span style="color:#ffffff;">★ Online Marketing Specialist ✿</span>
+      <span style="color:#a7f3d0;font-style:italic;font-weight:800;">
+        ★ Clickable Email Signature with Digital Business Card ✿
+      </span>
+    </div>
+  </div>
+
+  <!-- 2. Profile photo and professional details -->
+  <table class="profile-table" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="photo-cell">
+          <img
+            class="profile-photo"
+            src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png"
+            alt="Mr. Asim Krishna Roy"
+          >
+        </td>
+        <td class="profile-info">
+          <h3>Mr. Asim Krishna Roy</h3>
+          <p class="job-title">Online Marketing Specialist</p>
+          <p class="glowing-service-text">
+            Clickable Email Signature with Digital Business Card
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 3. Call button, Taj Mahal and QR CODE label -->
+  <table class="contact-table" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="contact-cell">
+          <button
+            type="button"
+            class="call-btn"
+            onclick="choosePhoneNumber()"
+          >
+            <span style="margin-right:4px;font-size:13px;">📞</span>
+            Click to Call
+          </button>
+        </td>
+
+        <td class="taj-cell">
+          <img
+            class="taj-image"
+            src="https://raw.githubusercontent.com/akr43-bit/akr43-bit.github.io/main/Images/taj-mahal-evening-agra-india-view-early-light-built-mughal-emperor-shah-jahan-memory-his-wife-mumtaz-uttar-88477560.jpg"
+            alt="Taj Mahal, Agra, India"
+          >
+        </td>
+
+        <td class="qr-cell">
+          <div class="qr-frame" aria-label="QR CODE placeholder">
+            <span class="qr-label">QR CODE</span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 4. Bottom charcoal container and portfolio button -->
+  <div class="portfolio-container">
+    <a
+      href="https://akr43-bit.github.io/"
+      class="portfolio-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>View My Portfolio</span>
+      <svg
+        class="arrow-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+
+</div>
+
+<script>
+function choosePhoneNumber() {
+  const choice = confirm(
+    "Choose a number to call:\n\n" +
+    "Press OK for Main Number (+91 9775116933)\n" +
+    "Press CANCEL for Second Number (+91 7063320748)"
+  );
+
+  if (choice) {
+    window.location.href = "tel:+919775116933";
+  } else {
+    window.location.href = "tel:+917063320748";
+  }
+}
+</script>
+
+</body>
+</html>
