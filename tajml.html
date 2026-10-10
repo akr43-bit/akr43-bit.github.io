@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Email Signature</title>
+
+<style>
+@keyframes instantLoop {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes textShine {
+  0% { background-position: 250% center; }
+  100% { background-position: -250% center; }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 12px;
+  background: #f4f7f6;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+#premium-sig-root {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.marquee-box {
+  width: 100%;
+  height: 44px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.15);
+}
+
+.marquee-text {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffdf00;
+  letter-spacing: 0.8px;
+  animation: instantLoop 20s infinite linear;
+  padding-left: 100%;
+}
+
+.glowing-service-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 800;
+  background: linear-gradient(
+    90deg, #111 0%, #111 25%, #00f2fe 45%,
+    #fff 50%, #00f2fe 55%, #111 75%, #111 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 3s linear infinite;
+}
+
+.contact-row {
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.call-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 13px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 25px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.taj-image {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 7px;
+  border: 1px solid #ddd;
+}
+
+.qr-frame {
+  width: 56px;
+  height: 56px;
+  padding: 3px;
+  border: 1.5px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  flex: 0 0 56px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+
+.qr-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.charcoal-container {
+  width: 100%;
+  margin: 18px auto 0;
+  padding: 12px;
+  background: #1e293b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(30,41,59,0.25);
+  text-align: center;
+}
+
+.portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(110,142,251,0.4);
+  transition: all 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+  box-shadow: 0 6px 20px rgba(167,119,227,0.6);
+  transform: translateY(-3px);
+}
+
+.arrow-icon { transition: transform 0.3s ease; }
+.portfolio-btn:hover .arrow-icon { transform: translateX(5px); }
+
+.copy-button {
+  margin-top: 12px;
+  background: transparent;
+  color: #ffdf00;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 6px;
+  padding: 9px 12px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 360px) {
+  #premium-sig-root { padding: 12px; }
+  .call-button { padding: 10px 8px; font-size: 11px; }
+  .taj-image { max-width: 100px; height: 62px; }
+  .qr-frame { width: 50px; height: 50px; flex-basis: 50px; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="premium-sig-root">
+
+  <!-- 1. Original animated black banner -->
+  <div style="padding-bottom:18px;">
+    <div class="marquee-box">
+      <div class="marquee-text">
+        ★ Mr. Asim Krishna Roy ✿
+        <span style="color:#fff;">★ Online Marketing Specialist ✿</span>
+        <span style="color:#a7f3d0;font-style:italic;font-weight:800;">
+          ★ Clickable Email Signature with Digital Business Card ✿
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Original profile photo and professional text -->
+  <table cellpadding="0" cellspacing="0"
+         style="width:100%;margin:0 auto 18px;border-collapse:collapse;">
+    <tbody>
+      <tr>
+        <td style="width:85px;vertical-align:middle;text-align:left;">
+          <div style="width:76px;height:76px;border-radius:50%;
+                      border:2.5px solid #000;overflow:hidden;
+                      background:#fafafa;
+                      box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <img
+              src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png"
+              alt="Mr. Asim Krishna Roy"
+              style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </td>
+
+        <td style="vertical-align:middle;padding-left:14px;text-align:left;">
+          <h3 style="margin:0 0 4px;color:#000;font-size:21px;
+                     font-weight:700;letter-spacing:0.3px;line-height:1.2;">
+            Mr. Asim Krishna Roy
+          </h3>
+
+          <p style="margin:0 0 6px;color:#0284c7;font-size:13.5px;
+                    font-weight:700;text-transform:uppercase;letter-spacing:1px;">
+            Online Marketing Specialist
+          </p>
+
+          <p class="glowing-service-text">
+            Clickable Email Signature with Digital Business Card
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 3. Click to Call, Taj Mahal image, and QR Code -->
+  <div class="contact-row">
+
+    <a href="tel:+919775116933"
+       class="call-button"
+       onclick="return choosePhoneNumber(event);">
+      <span style="margin-right:5px;font-size:14px;">📞</span>
+      Click to Call
+    </a>
+
+    <!-- Only the requested Taj Mahal image is inserted here -->
+    <img
+      class="taj-image"
+      src="https://raw.githubusercontent.com/akr43-bit/akr43-bit.github.io/main/Images/taj-mahal-evening-agra-india-view-early-light-built-mughal-emperor-shah-jahan-memory-his-wife-mumtaz-uttar-88477560.jpg"
+      alt="Taj Mahal, Agra, India">
+
+    <!-- Original QR image source retained -->
+    <div class="qr-frame">
+      <img src="https://postimg.cc" alt="QR Code">
+    </div>
+
+  </div>
+
+  <!-- 4. Charcoal container retained around the portfolio button -->
+  <div class="charcoal-container">
+
+    <a href="https://akr43-bit.github.io/" class="portfolio-btn">
+      <span>View My Portfolio</span>
+      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg"
+           width="20" height="20" viewBox="0 0 24 24"
+           fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+
+    <button class="copy-button" onclick="copySignature()">
+      Copy Premium Signature
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+function choosePhoneNumber(event) {
+  event.preventDefault();
+
+  var choice = confirm(
+    "Choose a number to call:\n\n" +
+    "Press OK for Main Number: +91 9775116933\n\n" +
+    "Press CANCEL for Second Number: +91 7063320748"
+  );
+
+  if (choice) {
+    window.location.href = "tel:+919775116933";
+  } else {
+    window.location.href = "tel:+917063320748";
+  }
+
+  return false;
+}
+
+function copySignature() {
+  var content = document.getElementById("premium-sig-root").innerHTML;
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(content)
+      .then(function() {
+        alert("Premium Signature Framework Copied Successfully!");
+      })
+      .catch(function() {
+        alert("Copy was blocked. Please select and copy the code manually.");
+      });
+  } else {
+    alert("Clipboard access is not supported in this viewer. Please copy manually.");
+  }
+}
+</script>
+
+</body>
+</html>
