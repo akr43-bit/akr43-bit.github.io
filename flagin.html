@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Email Signature - Port One</title>
+  <style>
+    /* পোর্টফোলিও বাটনের মূল ডিজাইন ও অ্যানিমেশন */
+    .portfolio-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: white;
+        text-decoration: none;
+        padding: 10px 0;
+        width: 100%; /* কন্টেইনারের ভেতরে ১০০% ফিট থাকবে */
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 50px;
+        box-shadow: 0 3px 10px rgba(110, 142, 251, 0.25);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        cursor: pointer;
+    }
+    .portfolio-btn span {
+        margin-right: 6px;
+        transition: transform 0.3s ease;
+    }
+    .arrow-icon {
+        transition: transform 0.3s ease;
+    }
+    .portfolio-btn:hover {
+        background: linear-gradient(135deg, #a777e3, #6e8efb);
+        box-shadow: 0 5px 15px rgba(167, 119, 227, 0.4);
+        transform: translateY(-1px);
+    }
+    .portfolio-btn:hover .arrow-icon {
+        transform: translateX(4px);
+    }
+    .portfolio-btn:hover span {
+        transform: translateX(-1px);
+    }
+    .portfolio-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 5px rgba(110, 142, 251, 0.3);
+    }
+    
+    /* গ্লোয়িং টেক্সট ইফেক্ট */
+    .glowing-service-text {
+        margin: 0; 
+        font-size: 15px; 
+        line-height: 1.4; 
+        font-weight: 800; 
+        letter-spacing: 0.1px; 
+        background: linear-gradient(90deg, #111111 0%, #0284c7 25%, #00f2fe 50%, #0284c7 75%, #111111 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textShine 4s linear infinite;
+    }
+
+    @keyframes textShine {
+      0% { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+  </style>
+</head>
+<body style="background-color: #f4f7f6; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Segoe UI', system-ui, sans-serif;">
+
+<div id="premium-sig-root" style="max-width: 500px; width: 100%; margin: 0 auto; background: #ffffff; padding: 25px 20px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid #eaeaea; box-sizing: border-box; text-align: center;">
+  
+  <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto; border-collapse: collapse; text-align: center;">
+    <tbody>
+      <!-- ১. উপরে কালো রানিং টেক্সট কন্টেইনার -->
+      <tr>
+        <td colspan="3" style="padding: 0 10px 18px 10px; text-align: center;">
+          <div style="width: 100%; height: 44px; background: #000000; border-radius: 8px; overflow: hidden; display: flex; align-items: center; position: relative; box-shadow: inset 0 0 10px rgba(255,255,255,0.15); margin: 0 auto;">
+            <div style="position: absolute; white-space: nowrap; font-size: 14px; font-weight: 700; color: #ffdf00; letter-spacing: 0.8px; animation: instantLoop 20s infinite linear; padding-left: 100%;">
+              ★ Mr. Asim Krishna Roy ✿ <span style="color: #ffffff;">★ Online Marketing Specialist ✿</span> <span style="color: #a7f3d0; font-style: italic; font-weight: 800;">★ Clickable Email Signature with Digital Business Card ✿</span>
+            </div>
+          </div>
+          <style>
+            @keyframes instantLoop {
+              0% { transform: translateX(0%); }
+              100% { transform: translateX(-100%); }
+            }
+          </style>
+        </td>
+      </tr>
+
+      <!-- ২. মাঝখানের কন্টেইনার: ফটো এবং টেক্সট -->
+      <tr>
+        <td colspan="3" style="padding: 10px 10px 30px 10px; text-align: center;">
+          <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
+            <tbody>
+              <tr>
+                <!-- বাম দিকে ফটো -->
+                <td style="width: 90px; vertical-align: middle; text-align: left; padding-left: 10px;">
+                  <div style="width: 76px; height: 76px; border-radius: 50%; border: 2.5px solid #000000; overflow: hidden; background: #fafafa; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <img src="https://postimg.cc" alt="Mr. Asim Krishna Roy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                  </div>
+                </td>
+                <!-- ডানপাশে টেক্সট লেয়ার -->
+                <td style="vertical-align: middle; padding-left: 18px; text-align: left;">
+                  <h3 style="margin: 0 0 8px 0; color: #000000; font-size: 21px; font-weight: 700; line-height: 1.2;">Mr. Asim Krishna Roy</h3>
+                  <p class="glowing-service-text" style="margin-bottom: 8px;">Online Marketing Specialist</p>
+                  <p style="margin: 8px 0 0 0; color: #555555; font-size: 13px; font-weight: 600; line-height: 1.4; letter-spacing: 0.2px;">Clickable Email Signature with Digital Business Card</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <!-- ৩. ৩ কলামের লেআউট: আপনার নির্দেশনা অনুযায়ী ফ্ল্যাগ এবং কিউআর কোড একসঙ্গে ৩ পিক্সেল বামে সরানো হয়েছে -->
+      <tr>
+        <td colspan="3" style="padding: 5px 0 5px 16px; text-align: center;">
+          <table cellpadding="0" cellspacing="0" style="width: 96%; margin: 0 auto; border-collapse: collapse;">
+            <tbody>
+              <tr>
+                <!-- বামদিকের কলাম: ক্লিক টু কল বাটন (তার জায়গায় স্থির রাখা হয়েছে) -->
+                <td style="width: 38%; vertical-align: middle; padding: 5px; padding-right: 27px; text-align: right;">
+                  <a href="tel:+919775116933" style="display: inline-block; width: 82px; height: 50px; padding: 10px 4px; background-color: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 12px; box-shadow: 0 3px 5px rgba(0,0,0,0.1); text-align: center; line-height: 1.4; box-sizing: border-box;">
+                    📞 Click<br>To Call
+                  </a>
+                </td>
+
+                <!-- মাঝখানের কলাম: প্রাউডলি ইন্ডিয়ান ও পতাকা (বাম দিকে ৩ পিক্সেল সরানোর জন্য left পজিশন -৫ থেকে বাড়িয়ে -৮পিক্সেল করা হয়েছে) -->
+                <td style="width: 24%; vertical-align: middle; padding: 0px; text-align: center;">
+                  <div style="font-size: 9px; font-weight: 800; color: #059669; letter-spacing: 0.5px; margin-bottom: 3px; position: relative; left: -8px;">PROUDLY INDIAN</div>
+                  
+                  <!-- ফ্ল্যাগ কন্টেইনার (left: -8px দিয়ে আরও বামপাশে শিফট করা হলো) -->
+                  <div style="display: inline-block; position: relative; width: 54px; height: 72px; text-align: left; margin: 0 auto; left: -8px;">
+                    <!-- ডান্ডা/লাঠি -->
+                    <div style="position: absolute; left: 4px; top: 0; width: 3px; height: 70px; background: linear-gradient(to right, #555, #ccc, #333); border-radius: 2px;"></div>
+                    <!-- ডান্ডার গোল্ডেন টপ ক্যাপ -->
+                    <div style="position: absolute; left: 2px; top: -4px; width: 7px; height: 7px; background: #d4af37; border-radius: 50%;"></div>
+                    
+                    <!-- মূল পতাকা -->
+                    <div style="position: absolute; left: 7px; top: 1px; width: 42px; height: 26px; box-shadow: 1px 2px 5px rgba(0,0,0,0.15); display: flex; flex-direction: column;">
+                      <div style="background-color: #FF9933; flex: 1;"></div>
+                      <div style="background-color: #FFFFFF; flex: 1; position: relative; display: flex; align-items: center; justify-content: center;">
+                        <!-- অশোক চক্র -->
+                        <div style="width: 6px; height: 6px; border: 1px solid #000080; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                          <div style="width: 2px; height: 2px; background-color: #000080; border-radius: 50%;"></div>
+                        </div>
+                      </div>
+                      <div style="background-color: #138808; flex: 1;"></div>
+                    </div>
+                  </div>
+                </td>
+
+                <!-- ডানদিকের কলাম: কিউআর কোডের ঘর (৩ পিক্সেল বামে সরানোর জন্য margin-left ও padding অ্যাডজাস্ট করা হয়েছে) -->
+                <td style="width: 38%; vertical-align: middle; padding: 5px; text-align: left;">
+                  <div style="display: inline-block; padding: 6px; background: #ffffff; border: 2px solid #000000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); width: 68px; height: 68px; box-sizing: border-box; margin-left: 2px;">
+                    <img src="https://qrserver.com" alt="QR Code" style="width: 100%; height: 100%; display: block; object-fit: contain;">
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <!-- ৪. নিচের সেকশন: দু'পাশে সমান লেভেলে (max-width: 90%) রাখা রেখার বর্ডার বক্স -->
+      <tr>
+        <td colspan="3" style="padding: 40px 10px 15px 10px; text-align: center;">
+          <div style="background: #ffffff; border: 2px solid #1e293b; padding: 10px; border-radius: 50px; max-width: 90%; margin: 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.04);">
+            <a href="#" class="portfolio-btn">
+              <span>View My Portfolio</span>
+              <svg class="arrow-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
