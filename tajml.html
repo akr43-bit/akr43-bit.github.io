@@ -16,7 +16,9 @@
   100% { background-position: -250% center; }
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -30,7 +32,10 @@ body {
   width: 100%;
   margin: 0 auto;
   background: #ffffff;
-  padding: 20px;
+
+  /* UPDATED: Extra white spacing for future border */
+  padding: 24px 28px;
+
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   border: 1px solid #eaeaea;
@@ -159,8 +164,13 @@ body {
   transform: translateY(-3px);
 }
 
-.arrow-icon { transition: transform 0.3s ease; }
-.portfolio-btn:hover .arrow-icon { transform: translateX(5px); }
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.portfolio-btn:hover .arrow-icon {
+  transform: translateX(5px);
+}
 
 .copy-button {
   margin-top: 12px;
@@ -176,16 +186,31 @@ body {
 }
 
 @media (max-width: 360px) {
-  #premium-sig-root { padding: 12px; }
-  .call-button { padding: 10px 8px; font-size: 11px; }
-  .taj-image { max-width: 100px; height: 62px; }
-  .qr-frame { width: 50px; height: 50px; flex-basis: 50px; }
+  #premium-sig-root {
+    /* Mobile spacing: balanced top/bottom and wider sides */
+    padding: 16px 20px;
+  }
+
+  .call-button {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  .taj-image {
+    max-width: 100px;
+    height: 62px;
+  }
+
+  .qr-frame {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+  }
 }
 </style>
 </head>
 
 <body>
-
 <div id="premium-sig-root">
 
   <!-- 1. Original animated black banner -->
@@ -247,7 +272,7 @@ body {
       Click to Call
     </a>
 
-    <!-- Only the requested Taj Mahal image is inserted here -->
+    <!-- Original Taj Mahal image -->
     <img
       class="taj-image"
       src="https://raw.githubusercontent.com/akr43-bit/akr43-bit.github.io/main/Images/taj-mahal-evening-agra-india-view-early-light-built-mughal-emperor-shah-jahan-memory-his-wife-mumtaz-uttar-88477560.jpg"
@@ -260,12 +285,14 @@ body {
 
   </div>
 
-  <!-- 4. Charcoal container retained around the portfolio button -->
+  <!-- 4. Original charcoal portfolio container -->
   <div class="charcoal-container">
 
-    <a href="https://akr43-bit.github.io/" class="portfolio-btn">
+    <a href="https://akr43-bit.github.io/index.html" class="portfolio-btn">
       <span>View My Portfolio</span>
-      <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg"
+
+      <svg class="arrow-icon"
+           xmlns="http://www.w3.org/2000/svg"
            width="20" height="20" viewBox="0 0 24 24"
            fill="none" stroke="currentColor" stroke-width="2"
            stroke-linecap="round" stroke-linejoin="round">
@@ -279,7 +306,6 @@ body {
     </button>
 
   </div>
-
 </div>
 
 <script>
