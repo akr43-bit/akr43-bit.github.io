@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +33,7 @@ body {
   width: 100%;
   margin: 0 auto;
   background: #ffffff;
-  padding: 24px 28px;
+  padding: 34px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   border: 1px solid #eaeaea;
@@ -147,7 +148,7 @@ body {
   background: linear-gradient(135deg, #6e8efb, #a777e3);
   color: white;
   text-decoration: none;
-  padding: 12px 18px;
+  padding: 12px 23px;
   font-size: 14px;
   font-weight: 600;
   border-radius: 50px;
@@ -184,7 +185,7 @@ body {
 
 @media (max-width: 360px) {
   #premium-sig-root {
-    padding: 16px 20px;
+    padding: 34px;
   }
 
   .call-button {
@@ -209,7 +210,7 @@ body {
 <body>
 <div id="premium-sig-root">
 
-  <!-- 1. Original animated black banner -->
+  <!-- 1. Animated black banner -->
   <div style="padding-bottom:18px;">
     <div class="marquee-box">
       <div class="marquee-text">
@@ -222,16 +223,16 @@ body {
     </div>
   </div>
 
-  <!-- 2. Original profile photo and professional text -->
+  <!-- 2. Profile photo and professional text -->
   <table cellpadding="0" cellspacing="0"
-         style="width:100%;margin:0 auto 18px;border-collapse:collapse;">
+    style="width:100%;margin:0 auto 18px;border-collapse:collapse;">
     <tbody>
       <tr>
         <td style="width:85px;vertical-align:middle;text-align:left;">
           <div style="width:76px;height:76px;border-radius:50%;
-                      border:2.5px solid #000;overflow:hidden;
-                      background:#fafafa;
-                      box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            border:2.5px solid #000;overflow:hidden;
+            background:#fafafa;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);">
             <img
               src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png"
               alt="Mr. Asim Krishna Roy"
@@ -241,12 +242,12 @@ body {
 
         <td style="vertical-align:middle;padding-left:14px;text-align:left;">
           <h3 style="margin:0 0 4px;color:#000;font-size:21px;
-                     font-weight:700;letter-spacing:0.3px;line-height:1.2;">
+            font-weight:700;letter-spacing:0.3px;line-height:1.2;">
             Mr. Asim Krishna Roy
           </h3>
 
           <p style="margin:0 0 6px;color:#0284c7;font-size:13.5px;
-                    font-weight:700;text-transform:uppercase;letter-spacing:1px;">
+            font-weight:700;text-transform:uppercase;letter-spacing:1px;">
             Online Marketing Specialist
           </p>
 
@@ -258,12 +259,12 @@ body {
     </tbody>
   </table>
 
-  <!-- 3. Click to Call, Taj Mahal image, and QR Code -->
+  <!-- 3. Click to Call, Taj Mahal and QR Code -->
   <div class="contact-row">
 
     <a href="tel:+919775116933"
-       class="call-button"
-       onclick="return choosePhoneNumber(event);">
+      class="call-button"
+      onclick="return choosePhoneNumber(event);">
       <span style="margin-right:5px;font-size:14px;">📞</span>
       Click to Call
     </a>
@@ -279,17 +280,18 @@ body {
 
   </div>
 
-  <!-- 4. Original charcoal portfolio container -->
+  <!-- 4. Portfolio container -->
   <div class="charcoal-container">
 
-    <a href="https://akr43-bit.github.io/index.html" class="portfolio-btn">
+    <a href="https://akr43-bit.github.io/index.html"
+      class="portfolio-btn">
       <span>View My Portfolio</span>
 
       <svg class="arrow-icon"
-           xmlns="http://www.w3.org/2000/svg"
-           width="20" height="20" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor" stroke-width="2"
-           stroke-linecap="round" stroke-linejoin="round">
+        xmlns="http://www.w3.org/2000/svg"
+        width="20" height="20" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
         <line x1="5" y1="12" x2="19" y2="12"></line>
         <polyline points="12 5 19 12 12 19"></polyline>
       </svg>
@@ -322,7 +324,9 @@ function choosePhoneNumber(event) {
 }
 
 function copySignature() {
-  var content = document.getElementById("premium-sig-root").innerHTML;
+  var content = document.getElementById(
+    "premium-sig-root"
+  ).innerHTML;
 
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(content)
@@ -340,3 +344,4 @@ function copySignature() {
 
 </body>
 </html>
+```
