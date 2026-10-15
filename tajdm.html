@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,7 +128,7 @@ body {
   100% { background-position: -250% center; }
 }
 
-/* Adjustment 1: Keep all three sections inside the container */
+/* Keep all three sections inside the container */
 .contact-table {
   width: 100%;
   border-collapse: collapse;
@@ -224,7 +223,7 @@ body {
   margin: 0;
 }
 
-/* Adjustment 2: Move the bottom container down by 10px */
+/* Existing portfolio container: position preserved */
 .portfolio-container {
   width: 100%;
   margin: 28px auto 0;
@@ -282,11 +281,48 @@ body {
   box-shadow: 0 3px 10px rgba(110,142,251,.4);
 }
 
+/* New Copy Premium Signature container */
+.copy-container {
+  width: 100%;
+  margin: 12px auto 0;
+  padding: 8px;
+  background: #1e293b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(30,41,59,.25);
+  text-align: center;
+}
+
+.copy-premium-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 12px 22px;
+  background: linear-gradient(135deg,#f5c542,#e99b16);
+  color: #111;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(245,197,66,.3);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.copy-premium-btn:hover {
+  background: linear-gradient(135deg,#e99b16,#f5c542);
+  transform: translateY(-2px);
+}
+
+.copy-premium-btn:active {
+  transform: translateY(0);
+}
+
 @media (max-width: 410px) {
-  /* Keep the 40px outer spacing on larger screens;
-     use responsive spacing on narrow mobile screens. */
+  /* The requested 40px white outer spacing is retained */
   body {
-    padding: 20px 10px;
+    padding: 40px;
   }
 
   #premium-sig-root {
@@ -322,6 +358,11 @@ body {
   .portfolio-btn {
     padding: 12px 24px;
     font-size: 15px;
+  }
+
+  .copy-premium-btn {
+    padding: 11px 14px;
+    font-size: 13px;
   }
 }
 </style>
@@ -421,6 +462,16 @@ body {
     </a>
   </div>
 
+  <!-- New container added below the existing portfolio container -->
+  <div class="copy-container">
+    <button
+      type="button"
+      class="copy-premium-btn"
+      onclick="copyPremiumSignature()">
+      Copy Premium Signature
+    </button>
+  </div>
+
 </div>
 
 <script>
@@ -437,7 +488,25 @@ function choosePhoneNumber() {
     window.location.href = "tel:+917063320748";
   }
 }
-</script>
-</body>
-</html>
-```
+
+/* Copies the profile, name, designation and two Taj Mahal images */
+async function copyPremiumSignature() {
+  const signatureHTML = `
+<div style="font-family:Arial,Helvetica,sans-serif;max-width:440px;margin:0 auto;padding:12px;background:#ffffff;text-align:center;border:1px solid #eaeaea;border-radius:12px;box-sizing:border-box;">
+  <table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;text-align:left;">
+    <tbody>
+      <tr>
+        <td style="width:85px;vertical-align:middle;">
+          <img src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png" alt="Mr. Asim Krishna Roy" style="display:block;width:76px;height:76px;border-radius:50%;border:2.5px solid #000;object-fit:cover;">
+        </td>
+        <td style="vertical-align:middle;padding-left:12px;overflow-wrap:anywhere;">
+          <h3 style="margin:0 0 4px;color:#000;font-size:21px;font-weight:700;line-height:1.2;">Mr. Asim Krishna Roy</h3>
+          <p style="margin:0 0 6px;color:#0284c7;font-size:13.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Online Marketing Specialist</p>
+          <p style="margin:0;font-size:15px;line-height:1.4;font-weight:800;color:#111;">Clickable Email Signature with Digital Business Card</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="display:flex;justify-content:center;align-items:flex-end;gap:4px;width:100%;margin-top:14px;padding-top:12px;border-top:1px dashed #e5e7eb;box-sizing:border-box;">
+    <img src="https://raw.githubusercontent.com/akr43-bit/akr43-bit.github.io/main/Images/ip-QEJI4cI3anszFwuExZh-S99WirufwahoSUXA6ijPW8hZihAbfxXeB4tJx-McDISCnoBYmfzFv_4detzOi2LtmZ5PG4eHVEC6WR5SRZaCBsflWYSN7FDxxmnwCyb0nqWLNRugnqT4jv7TQ8BS4CT7mLYjpJmeFsmYN2r5-7SANkUGIGU-fvK1eALIBMwqb.jpeg" alt="
