@@ -1,213 +1,215 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Clickable Email Signature - Asim Krishna Roy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Clickable Email Signature - Asim Krishna Roy</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-    body {
-      margin: 0;
-      padding: 0;
-      background: #e5e7eb;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #e5e7eb;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
 
-    /* Outer white spacing with premium border */
+  /* White outer frame: 20px outside + 20px existing inner padding */
+  .white-space-frame {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+  }
+
+  #premium-sig-root {
+    max-width: 440px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    border: 1px solid #eaeaea;
+    text-align: center;
+  }
+
+  @keyframes instantLoop {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes textShine {
+    0% { background-position: 250% center; }
+    100% { background-position: -250% center; }
+  }
+
+  .portfolio-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(110,142,251,0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .portfolio-btn span {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio-btn:hover {
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+    box-shadow: 0 6px 20px rgba(167,119,227,0.6);
+    transform: translateY(-2px);
+  }
+
+  .portfolio-btn:hover .arrow-icon {
+    transform: translateX(5px);
+  }
+
+  .portfolio-btn:hover span {
+    transform: translateX(-2px);
+  }
+
+  @media (max-width: 520px) {
     .white-space-frame {
       width: 100%;
       max-width: 480px;
-      margin: 0 auto;
-      padding: 40px;
-      background: #ffffff;
-      border: 3px solid #1e293b;
-      outline: 2px solid #d4af37;
-      outline-offset: 3px;
-    }
-
-    /* Main signature card */
-    #premium-sig-root {
-      max-width: 440px;
-      width: 100%;
-      margin: 0 auto;
-      background: #ffffff;
       padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      text-align: center;
     }
 
-    @keyframes instantLoop {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
+    #premium-sig-root {
+      width: 100%;
+      padding: 20px;
     }
-
-    @keyframes textShine {
-      0% { background-position: 250% center; }
-      100% { background-position: -250% center; }
-    }
-
-    .portfolio-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #6e8efb, #a777e3);
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      border-radius: 50px;
-      box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      margin: 0 auto;
-    }
-
-    .portfolio-btn span {
-      margin-right: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .arrow-icon {
-      transition: transform 0.3s ease;
-    }
-
-    .portfolio-btn:hover {
-      background: linear-gradient(135deg, #a777e3, #6e8efb);
-      box-shadow: 0 6px 20px rgba(167, 119, 227, 0.6);
-      transform: translateY(-2px);
-    }
-
-    .portfolio-btn:hover .arrow-icon {
-      transform: translateX(5px);
-    }
-
-    .portfolio-btn:hover span {
-      transform: translateX(-2px);
-    }
-
-    @media (max-width: 520px) {
-      .white-space-frame {
-        width: 100%;
-        max-width: 480px;
-        padding: 40px;
-      }
-
-      #premium-sig-root {
-        width: 100%;
-        padding: 20px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
-  <div class="white-space-frame">
-    <div id="premium-sig-root">
 
-      <table cellpadding="0" cellspacing="0"
-        style="width:100%; margin:0 auto; border-collapse:collapse; text-align:center;">
-        <tbody>
+<div class="white-space-frame">
 
-          <!-- Top animated black container -->
-          <tr>
-            <td colspan="2" style="padding:0 0 18px; text-align:center;">
-              <div style="width:100%; height:44px; background:#000000; border-radius:8px; overflow:hidden; display:flex; align-items:center; position:relative; box-shadow:inset 0 0 10px rgba(255,255,255,0.15);">
-                <div style="position:absolute; white-space:nowrap; font-size:15px; font-weight:700; color:#ffdf00; letter-spacing:0.8px; animation:instantLoop 20s infinite linear; padding-left:100%;">
-                  ★ Mr. Asim Krishna Roy ✿
-                  <span style="color:#ffffff;">★ Online Marketing Specialist ✿</span>
-                  <span style="color:#a7f3d0; font-style:italic; font-weight:800;">★ Clickable Email Signature with Digital Business Card ✿</span>
-                </div>
+  <div id="premium-sig-root">
+
+    <table cellpadding="0" cellspacing="0"
+      style="width:100%; margin:0 auto; border-collapse:collapse; text-align:center;">
+      <tbody>
+
+        <!-- Top animated black container -->
+        <tr>
+          <td colspan="2" style="padding:0 0 18px; text-align:center;">
+            <div style="width:100%; height:44px; background:#000000; border-radius:8px; overflow:hidden; display:flex; align-items:center; position:relative; box-shadow:inset 0 0 10px rgba(255,255,255,0.15);">
+              <div style="position:absolute; white-space:nowrap; font-size:15px; font-weight:700; color:#ffdf00; letter-spacing:0.8px; animation:instantLoop 20s infinite linear; padding-left:100%;">
+                ★ Mr. Asim Krishna Roy ✿
+                <span style="color:#ffffff;">★ Online Marketing Specialist ✿</span>
+                <span style="color:#a7f3d0; font-style:italic; font-weight:800;">★ Clickable Email Signature with Digital Business Card ✿</span>
               </div>
-            </td>
-          </tr>
+            </div>
+          </td>
+        </tr>
 
-          <!-- Profile photo and text -->
-          <tr>
-            <td colspan="2" style="padding:0 0 18px; text-align:center;">
-              <table cellpadding="0" cellspacing="0" style="width:100%; margin:0 auto;">
-                <tbody>
-                  <tr>
-                    <td style="width:85px; vertical-align:middle; text-align:left;">
-                      <div style="width:76px; height:76px; border-radius:50%; border:2.5px solid #000000; overflow:hidden; background:#fafafa; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-                        <img
-                          src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png"
-                          alt="Mr. Asim Krishna Roy"
-                          style="width:100%; height:100%; object-fit:cover; display:block;">
-                      </div>
-                    </td>
+        <!-- Profile photo and text -->
+        <tr>
+          <td colspan="2" style="padding:0 0 18px; text-align:center;">
+            <table cellpadding="0" cellspacing="0" style="width:100%; margin:0 auto;">
+              <tbody>
+                <tr>
+                  <td style="width:85px; vertical-align:middle; text-align:left;">
+                    <div style="width:76px; height:76px; border-radius:50%; border:2.5px solid #000000; overflow:hidden; background:#fafafa; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                      <img
+                        src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png"
+                        alt="Mr. Asim Krishna Roy"
+                        style="width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                  </td>
 
-                    <td style="vertical-align:middle; padding-left:14px; text-align:left;">
-                      <h3 style="margin:0 0 4px; color:#000000; font-size:21px; font-weight:700; letter-spacing:0.3px; line-height:1.2;">
-                        Mr. Asim Krishna Roy
-                      </h3>
+                  <td style="vertical-align:middle; padding-left:14px; text-align:left;">
+                    <h3 style="margin:0 0 4px; color:#000000; font-size:21px; font-weight:700; letter-spacing:0.3px; line-height:1.2;">
+                      Mr. Asim Krishna Roy
+                    </h3>
 
-                      <p style="margin:0 0 6px; color:#0284c7; font-size:13.5px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">
-                        Online Marketing Specialist
-                      </p>
+                    <p style="margin:0 0 6px; color:#0284c7; font-size:13.5px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">
+                      Online Marketing Specialist
+                    </p>
 
-                      <p class="glowing-service-text" style="margin:0; font-size:15px; line-height:1.4; font-weight:800; letter-spacing:0.1px; background:linear-gradient(90deg,#111111 0%,#111111 25%,#00f2fe 45%,#ffffff 50%,#00f2fe 55%,#111111 75%,#111111 100%); background-size:250% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation:textShine 3s linear infinite;">
-                        Clickable Email Signature with Digital Business Card
-                      </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
+                    <p class="glowing-service-text" style="margin:0; font-size:15px; line-height:1.4; font-weight:800; letter-spacing:0.1px; background:linear-gradient(90deg,#111111 0%,#111111 25%,#00f2fe 45%,#ffffff 50%,#00f2fe 55%,#111111 75%,#111111 100%); background-size:250% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation:textShine 3s linear infinite;">
+                      Clickable Email Signature with Digital Business Card
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
 
-          <!-- Click to Call and QR Code placeholder -->
-          <tr>
-            <td style="border-top:1px dashed #e5e7eb; padding:18px 0 0; text-align:left; vertical-align:middle;">
-              <a href="javascript:void(0);"
-                onclick="var choice = confirm('Choose a number to call:\n\nPress OK for Main Number (+91 9775116933)\nPress CANCEL for Second Number (+91 7063320748)'); if(choice) { window.location.href='tel:+919775116933'; } else { window.location.href='tel:+917063320748'; }"
-                style="display:inline-flex; align-items:center; background:#000000; color:#ffffff; text-decoration:none; padding:11px 22px; font-size:13px; font-weight:700; border-radius:25px; letter-spacing:0.5px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-                <span style="margin-right:6px; font-size:14px;">📞</span>
-                Click to Call
+        <!-- Click to Call and QR Code -->
+        <tr>
+          <td style="border-top:1px dashed #e5e7eb; padding:18px 0 0; text-align:left; vertical-align:middle;">
+            <a href="javascript:void(0);"
+               onclick="var choice = confirm('Choose a number to call:\n\nPress OK for Main Number (+91 9775116933)\nPress CANCEL for Second Number (+91 7063320748)'); if(choice){ window.location.href='tel:+919775116933'; } else { window.location.href='tel:+917063320748'; }"
+               style="display:inline-flex; align-items:center; background:#000000; color:#ffffff; text-decoration:none; padding:11px 22px; font-size:13px; font-weight:700; border-radius:25px; letter-spacing:0.5px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+              <span style="margin-right:6px; font-size:14px;">📞</span>
+              Click to Call
+            </a>
+          </td>
+
+          <td style="border-top:1px dashed #e5e7eb; padding:18px 0 0; text-align:right; vertical-align:middle; width:62px;">
+            <div style="width:56px; height:56px; padding:3px; border:1.5px solid #000000; border-radius:8px; background:#ffffff; display:inline-block; box-shadow:0 3px 8px rgba(0,0,0,0.06); box-sizing:border-box;">
+              <img
+                src="https://postimg.cc"
+                alt="QR Code"
+                style="width:100%; height:100%; display:block;">
+            </div>
+          </td>
+        </tr>
+
+        <!-- Bottom container and portfolio button -->
+        <tr>
+          <td colspan="2" style="padding:38px 0 0; text-align:center;">
+            <div style="width:100%; height:46px; background:#1e293b; border-radius:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(30,41,59,0.25); margin:0 auto;">
+              <button
+                onclick="navigator.clipboard.writeText(document.getElementById('premium-sig-root').innerHTML).then(function(){alert('Premium Signature Framework Copied Successfully!');}).catch(function(){alert('Copy failed. Please try again.');});"
+                style="background:transparent; color:#ffdf00; border:none; width:100%; height:100%; font-size:13.5px; font-weight:700; letter-spacing:1px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;">
+                Copy Premium Signature
+              </button>
+            </div>
+
+            <div style="padding-top:12px;">
+              <a href="https://akr43-bit.github.io/" class="portfolio-btn">
+                <span>View My Portfolio</span>
+                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
               </a>
-            </td>
+            </div>
+          </td>
+        </tr>
 
-            <td style="border-top:1px dashed #e5e7eb; padding:18px 0 0; text-align:right; vertical-align:middle; width:62px;">
-              <div style="width:56px; height:56px; padding:3px; border:1.5px solid #000000; border-radius:8px; background:#ffffff; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 3px 8px rgba(0,0,0,0.06); box-sizing:border-box; color:#000000; font-size:10px; font-weight:600;">
-                QR Code
-              </div>
-            </td>
-          </tr>
+      </tbody>
+    </table>
 
-          <!-- Bottom container and portfolio button -->
-          <tr>
-            <td colspan="2" style="padding:38px 0 0; text-align:center;">
-              <div style="width:100%; height:46px; background:#1e293b; border-radius:8px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(30,41,59,0.25); margin:0 auto;">
-                <button
-                  onclick="navigator.clipboard.writeText(document.getElementById('premium-sig-root').innerHTML).then(function(){alert('Premium Signature Framework Copied Successfully!');}).catch(function(){alert('Copy failed. Please try again.');});"
-                  style="background:transparent; color:#ffdf00; border:none; width:100%; height:100%; font-size:13.5px; font-weight:700; letter-spacing:1px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;">
-                  Copy Premium Signature
-                </button>
-              </div>
-
-              <div style="padding-top:12px;">
-                <a href="https://akr43-bit.github.io/" class="portfolio-btn">
-                  <span>View My Portfolio</span>
-                  <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
-
-    </div>
   </div>
+</div>
+
 </body>
 </html>
