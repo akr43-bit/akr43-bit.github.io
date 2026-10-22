@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +11,15 @@
       box-sizing: border-box;
     }
 
+    html {
+      background: #ffffff;
+      min-height: 100%;
+    }
+
     body {
       margin: 0;
       padding: 40px;
+      min-height: 100vh;
       background: #ffffff;
       font-family: 'Segoe UI', system-ui, sans-serif;
     }
@@ -208,7 +214,7 @@
       cursor: pointer;
     }
 
-    /* Keep 40px white space on every outer side */
+    /* Exactly 40px white outer spacing on every side */
     @media (max-width: 600px) {
       body {
         padding: 40px;
@@ -388,3 +394,4 @@
 
 </body>
 </html>
+```
