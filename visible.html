@@ -1,262 +1,250 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Clickable Email Signature - Asim Krishna Roy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Clickable Email Signature - Asim Krishna Roy</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    html {
-      background: #ffffff;
-      min-height: 100%;
-    }
+body {
+  margin: 0;
+  padding: 40px;
+  background: #ffffff;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
 
-    body {
-      margin: 0;
-      padding: 40px;
-      min-height: 100vh;
-      background: #ffffff;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-    }
+#premium-sig-root {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #eaeaea;
+  text-align: center;
+}
 
-    #premium-sig-root {
-      max-width: 440px;
-      width: 100%;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      border: 1px solid #eaeaea;
-      text-align: center;
-    }
+.top-banner {
+  width: 100%;
+  height: 44px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.15);
+  margin: 0 auto;
+}
 
-    .top-banner {
-      width: 100%;
-      height: 44px;
-      background: #000;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      position: relative;
-      box-shadow: inset 0 0 10px rgba(255,255,255,0.15);
-      margin: 0 auto;
-    }
+.banner-text {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffdf00;
+  letter-spacing: .8px;
+  animation: instantLoop 20s infinite linear;
+  padding-left: 100%;
+}
 
-    .banner-text {
-      position: absolute;
-      white-space: nowrap;
-      font-size: 15px;
-      font-weight: 700;
-      color: #ffdf00;
-      letter-spacing: .8px;
-      animation: instantLoop 20s infinite linear;
-      padding-left: 100%;
-    }
+@keyframes instantLoop {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
 
-    @keyframes instantLoop {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
-    }
+.profile-row {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
 
-    .profile-row {
-      width: 100%;
-      margin: 0 auto;
-      border-collapse: collapse;
-    }
+.profile-photo-wrap {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 2.5px solid #000;
+  overflow: hidden;
+  background: #fafafa;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
 
-    .profile-photo-wrap {
-      width: 76px;
-      height: 76px;
-      border-radius: 50%;
-      border: 2.5px solid #000;
-      overflow: hidden;
-      background: #fafafa;
-      box-shadow: 0 4px 12px rgba(0,0,0,.1);
-    }
+.profile-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-    .profile-photo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.service-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: .1px;
+  background: linear-gradient(
+    90deg,
+    #111 0%,
+    #111 25%,
+    #00f2fe 45%,
+    #fff 50%,
+    #00f2fe 55%,
+    #111 75%,
+    #111 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 3s linear infinite;
+}
 
-    .service-text {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.4;
-      font-weight: 800;
-      letter-spacing: .1px;
-      background: linear-gradient(
-        90deg,
-        #111 0%,
-        #111 25%,
-        #00f2fe 45%,
-        #fff 50%,
-        #00f2fe 55%,
-        #111 75%,
-        #111 100%
-      );
-      background-size: 250% auto;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: textShine 3s linear infinite;
-    }
+@keyframes textShine {
+  0% { background-position: 250% center; }
+  100% { background-position: -250% center; }
+}
 
-    @keyframes textShine {
-      0% { background-position: 250% center; }
-      100% { background-position: -250% center; }
-    }
+.call-button {
+  display: inline-flex;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 25px;
+  letter-spacing: .3px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  white-space: nowrap;
+}
 
-    .call-button {
-      display: inline-flex;
-      align-items: center;
-      background: #000;
-      color: #fff;
-      text-decoration: none;
-      padding: 11px 18px;
-      font-size: 13px;
-      font-weight: 700;
-      border-radius: 25px;
-      letter-spacing: .3px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.15);
-      white-space: nowrap;
-    }
+.qr-frame {
+  width: 56px;
+  height: 56px;
+  padding: 3px;
+  border: 1.5px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,.06);
+  font-size: 10px;
+  color: #111;
+}
 
-    .qr-frame {
-      width: 56px;
-      height: 56px;
-      padding: 3px;
-      border: 1.5px solid #000;
-      border-radius: 8px;
-      background: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 3px 8px rgba(0,0,0,.06);
-      font-size: 10px;
-      color: #111;
-    }
+.bottom-container {
+  width: 100%;
+  min-height: 46px;
+  background: #1e293b;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(30,41,59,.25);
+  margin: 38px auto 0;
+}
 
-    .bottom-container {
-      width: 100%;
-      min-height: 46px;
-      background: #1e293b;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(30,41,59,.25);
-      margin: 38px auto 0;
-    }
+.portfolio-button {
+  position: relative;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 8px;
+  background: #11052c;
+  color: #fff;
+  border: 3px solid #8a2be2;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(138,43,226,.45);
+}
 
-    .portfolio-button {
-      position: relative;
-      width: 100%;
-      min-height: 46px;
-      padding: 10px 8px;
-      background: #11052c;
-      color: #fff;
-      border: 3px solid #8a2be2;
-      border-radius: 8px;
-      cursor: pointer;
-      overflow: hidden;
-      font-family: 'Arial Black', Impact, sans-serif;
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      box-shadow: 0 0 15px rgba(138,43,226,.45);
-    }
+.portfolio-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0,255,204,.4),
+    rgba(255,255,255,.7),
+    rgba(218,112,214,.4),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: turboLight 1.2s 12 linear;
+}
 
-    .portfolio-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -150%;
-      width: 80%;
-      height: 100%;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(0,255,204,.4),
-        rgba(255,255,255,.7),
-        rgba(218,112,214,.4),
-        transparent
-      );
-      transform: skewX(-25deg);
-      animation: turboLight 1.2s 12 linear;
-    }
+@keyframes turboLight {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
 
-    @keyframes turboLight {
-      0% { left: -150%; }
-      100% { left: 150%; }
-    }
+.copy-button {
+  margin-top: 12px;
+  width: 100%;
+  min-height: 42px;
+  border: 0;
+  border-radius: 8px;
+  background: #000;
+  color: #ffdf00;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  cursor: pointer;
+}
 
-    .copy-button {
-      margin-top: 12px;
-      width: 100%;
-      min-height: 42px;
-      border: 0;
-      border-radius: 8px;
-      background: #000;
-      color: #ffdf00;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .6px;
-      cursor: pointer;
-    }
+@media (max-width: 600px) {
+  body {
+    padding: 40px;
+  }
+}
 
-    /* Exactly 40px white outer spacing on every side */
-    @media (max-width: 600px) {
-      body {
-        padding: 40px;
-        background: #ffffff;
-      }
-    }
+@media (max-width: 420px) {
+  body {
+    padding: 40px;
+  }
 
-    @media (max-width: 420px) {
-      body {
-        padding: 40px;
-        background: #ffffff;
-      }
+  #premium-sig-root {
+    padding: 12px;
+  }
 
-      #premium-sig-root {
-        padding: 12px;
-      }
+  .profile-name {
+    font-size: 18px !important;
+  }
 
-      .profile-name {
-        font-size: 18px !important;
-      }
+  .profile-title {
+    font-size: 11px !important;
+    letter-spacing: .5px !important;
+  }
 
-      .profile-title {
-        font-size: 11px !important;
-        letter-spacing: .5px !important;
-      }
+  .service-text {
+    font-size: 12px;
+  }
 
-      .service-text {
-        font-size: 12px;
-      }
-
-      .call-button {
-        padding: 10px 12px;
-        font-size: 12px;
-      }
-    }
-  </style>
+  .call-button {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}
+</style>
 </head>
 
 <body>
-
 <div id="premium-sig-root">
-
   <table cellpadding="0" cellspacing="0"
     style="width:100%;margin:0 auto;border-collapse:collapse;text-align:center;">
     <tbody>
@@ -331,7 +319,6 @@
       <!-- Bottom portfolio container -->
       <tr>
         <td colspan="2" style="padding:0;text-align:center;">
-
           <div class="bottom-container">
             <button class="portfolio-button"
               id="portfolioButton"
@@ -343,7 +330,6 @@
           <button class="copy-button" onclick="copySignature()">
             COPY PREMIUM SIGNATURE
           </button>
-
         </td>
       </tr>
 
@@ -352,46 +338,44 @@
 </div>
 
 <script>
-  function openPortfolio() {
-    window.open('https://akr43-bit.github.io/', '_blank');
+function openPortfolio() {
+  window.open('https://akr43-bit.github.io/', '_blank');
+}
+
+function copySignature() {
+  const root = document.getElementById('premium-sig-root');
+  const html = root.outerHTML;
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(html)
+      .then(function() {
+        alert('Premium Signature HTML copied.');
+      })
+      .catch(function() {
+        fallbackCopy(html);
+      });
+  } else {
+    fallbackCopy(html);
+  }
+}
+
+function fallbackCopy(value) {
+  const area = document.createElement('textarea');
+  area.value = value;
+  area.style.position = 'fixed';
+  area.style.opacity = '0';
+  document.body.appendChild(area);
+  area.select();
+
+  try {
+    document.execCommand('copy');
+    alert('Copy attempted. Please test whether the content pastes correctly.');
+  } catch(e) {
+    alert('Copy was not supported in this viewer.');
   }
 
-  function copySignature() {
-    const root = document.getElementById('premium-sig-root');
-    const html = root.outerHTML;
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(html)
-        .then(function() {
-          alert('Premium Signature HTML copied.');
-        })
-        .catch(function() {
-          fallbackCopy(html);
-        });
-    } else {
-      fallbackCopy(html);
-    }
-  }
-
-  function fallbackCopy(value) {
-    const area = document.createElement('textarea');
-    area.value = value;
-    area.style.position = 'fixed';
-    area.style.opacity = '0';
-    document.body.appendChild(area);
-    area.select();
-
-    try {
-      document.execCommand('copy');
-      alert('Copy attempted. Please test whether the content pastes correctly.');
-    } catch(e) {
-      alert('Copy was not supported in this viewer.');
-    }
-
-    document.body.removeChild(area);
-  }
+  document.body.removeChild(area);
+}
 </script>
-
 </body>
 </html>
-```
