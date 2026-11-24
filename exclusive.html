@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Asim Krishna Roy - Special Digital Business Card</title>
+<style>
+  @import url('https://googleapis.com');
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: radial-gradient(circle at top, #1b1429 0%, #0d0914 100%);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+    color: #f5f5f5;
+  }
+
+  .card-wrapper {
+    width: 100%;
+    max-width: 420px;
+    background: linear-gradient(145deg, #231934, #140e20);
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    border-radius: 22px;
+    padding: 25px 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.75), 0 0 20px rgba(186, 104, 200, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Top Badge */
+  .exclusive-tag {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffd700;
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+
+  /* Header Section: Photo Left + Details Right */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed rgba(255, 215, 0, 0.25);
+  }
+
+  .photo-box {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+  }
+
+  .photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2.5px solid #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  }
+
+  .info-box h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+
+  .info-box .designation {
+    font-size: 13px;
+    color: #e0b0ff;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .info-box .location {
+    font-size: 11.5px;
+    color: #bdbdbd;
+  }
+
+  /* Primary Contact Notice */
+  .email-priority-banner {
+    background: rgba(255, 215, 0, 0.08);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+    padding: 10px 12px;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .email-priority-banner span {
+    display: block;
+    font-size: 11px;
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .email-priority-banner strong {
+    font-size: 13.5px;
+    color: #ffffff;
+    word-break: break-all;
+  }
+
+  /* Action Buttons */
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .action-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .action-btn:active {
+    transform: scale(0.98);
+  }
+
+  /* Primary Email Button */
+  .btn-email {
+    background: linear-gradient(135deg, #4a148c, #7b1fa2);
+    color: #ffffff;
+    border: 1px solid #ffd700;
+    box-shadow: 0 4px 15px rgba(123, 31, 162, 0.45);
+  }
+
+  /* Blogger Button */
+  .btn-blogger {
+    background: linear-gradient(135deg, #bf360c, #e65100);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  /* Music Toggle Button (Exclusive Global Design) */
+  .btn-music {
+    background: linear-gradient(135deg, #2e1a47, #4527a0);
+    color: #ffd700;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+  }
+
+  /* Light Sweep Effect (White/Pinkish Glow) */
+  .action-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 240, 250, 0.45), transparent);
+    transform: skewX(-25deg);
+    animation: lightSweep 3.5s infinite;
+  }
+
+  @keyframes lightSweep {
+    0% { left: -100%; }
+    50% { left: 150%; }
+    100% { left: 150%; }
+  }
+
+  /* Hidden Music List Container */
+  .music-drawer {
+    display: none;
+    background: rgba(18, 12, 28, 0.9);
+    border: 1px solid rgba(224, 176, 255, 0.3);
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.4s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .music-drawer h3 {
+    font-size: 13.5px;
+    color: #ffd700;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  .track-item {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .track-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .track-title {
+    font-size: 12px;
+    color: #e0b0ff;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  audio {
+    width: 100%;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  /* Bottom Section: Secondary Numbers + QR Code */
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .secondary-contacts {
+    font-size: 11.5px;
+    color: #cccccc;
+    line-height: 1.7;
+  }
+
+  .secondary-contacts .note {
+    font-size: 10px;
+    color: #ffd700;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .qr-box {
+    width: 82px;
+    height: 82px;
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    border: 1.5px solid #ffd700;
+  }
+
+  .qr-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .footer-mark {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 10.5px;
+    color: #8e8e8e;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="card-wrapper">
+  <div class="exclusive-tag">✦ Exclusive Global Digital Card ✦</div>
+
+  
+  <div class="profile-header">
+    <div class="photo-box">
+      <img src="https://i.postimg.cc/K4XqYGKj/f2626ef5-74cc-4681-b0b1-c913b7dcc139-20260715-145941-0000.png" alt="Mr. Asim Krishna Roy">
+    </div>
+    <div class="info-box">
+      <h1>Mr. Asim Krishna Roy</h1>
+      <div class="designation">Online Global Marketing Specialist</div>
+      <div class="location">Purba Medinipur, WB, India - 721658</div>
+    </div>
+  </div>
+
+  <!-- Primary Contact Highlight -->
+  <div class="email-priority-banner">
+    <span>★ Primary & Main Contact Method ★</span>
+    <strong>asimkroy43@gmail.com</strong>
+  </div>
+
+  <!-- Main Interactive Buttons -->
+  <div class="btn-group">
+    <!-- 1. Email Button -->
+    <a href="mailto:asimkroy43@://gmail.com" class="action-btn btn-email">
+      ✉️ Email Me (Main Contact)
+    </a>
+
+    <!-- 2. Blogger Button (Replace # with your Blogger URL) -->
+    <a href="https://blogger.com" target="_blank" class="action-btn btn-blogger">
+      🌐 Visit My Official Blogger
+    </a>
+
+     <!-- 3. Music List Toggle Button -->
+    <button type="button" class="action-btn btn-music" onclick="toggleMusicList()">
+      🎵 Exclusive Relaxing Music List
+    </button>
+  </div>
+
+  <!-- Expandable Music List Section -->
+  <div class="music-drawer" id="musicDrawer">
+    <h3>✦ The Symphony of Life - Spiritual & Relaxing ✦</h3>
+    
+   <div class="track-item">
+      <span class="track-title">1. Peaceful Meditation Track</span>
+      <audio controls preload="metadata">
+        <source src="music1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="track-item">
+      <span class="track-title">2. Spiritual Relaxing Vibe</span>
+      <audio controls preload="metadata">
+        <source src="music2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+
+
+  <!-- Secondary Info & QR Code -->
+  <div class="bottom-section">
+    <div class="secondary-contacts">
+      <span class="note">*For Direct Communication, Please Use Email</span>
+      <div>Alt. Ref 1: +91 9775116933</div>
+      <div>Alt. Ref 2: +91 7063320748</div>
+    </div>
+    <div class="qr-box">
+      <img src="https://i.postimg.cc/02y0QhZR/qr-code-(44).png" alt="QR Code">
+    </div>
+  </div>
+
+  <div class="footer-mark">✦ Crafted for Global Excellence ✦</div>
+</div>
+
+<script>
+  function toggleMusicList() {
+    var drawer = document.getElementById("musicDrawer");
+    if (drawer.style.display === "block") {
+      drawer.style.display = "none";
+    } else {
+      drawer.style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
+
