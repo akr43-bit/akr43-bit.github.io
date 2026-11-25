@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Asim Krishna Roy - Special Digital Business Card</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: radial-gradient(circle at top, #1b1429 0%, #0d0914 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+    color: #f5f5f5;
+  }
+
+  /* কার্ডের চারপাশে ঝকঝকে সাদা আলোর বর্ডার */
+  .card-wrapper {
+    width: 100%;
+    max-width: 420px;
+    background: linear-gradient(145deg, #231934, #140e20);
+    border: 2px solid #ffffff;
+    border-radius: 22px;
+    padding: 25px 20px;
+    box-shadow: 
+      0 0 12px #ffffff, 
+      0 0 25px rgba(255, 255, 255, 0.8), 
+      0 15px 40px rgba(0, 0, 0, 0.85);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  /* মিউজিক পেজ খুললে কার্ডের বর্ডার রয়্যাল বেগুনি (Royal Purple) হবে */
+  .card-wrapper:has(#pageSwitch:checked) {
+    border: 2px solid #b44cff;
+    box-shadow: 
+      0 0 14px #9d4edd, 
+      0 0 30px rgba(157, 78, 221, 0.85), 
+      0 15px 40px rgba(0, 0, 0, 0.85);
+  }
+
+  /* পিওর CSS পেজ সুইচিং (JavaScript ছাড়াই কাজ করবে) */
+  #pageSwitch {
+    display: none;
+  }
+
+  #pageSwitch:checked ~ .main-page {
+    display: none;
+  }
+
+  #pageSwitch:checked ~ .music-page {
+    display: block;
+    animation: fadeIn 0.35s ease;
+  }
+
+  .music-page {
+    display: none;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .exclusive-tag {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffd700;
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
+  }
+
+  .photo-box {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+  }
+
+  .photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2.5px solid #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  }
+
+  .info-box h1 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+
+  .info-box .designation {
+    font-size: 13px;
+    color: #e0b0ff;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .info-box .location {
+    font-size: 11.5px;
+    color: #bdbdbd;
+    margin-top: 5px;
+    display: block;
+  }
+
+  .shifted-controls {
+    margin-top: 20px;
+  }
+
+  /* ১ম বাটন/ব্যানার: পিল-শেপড (ক্যাপসুল আকৃতি) */
+  .email-priority-banner {
+    background: rgba(255, 215, 0, 0.08);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 50px;
+    padding: 10px 18px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .email-priority-banner span {
+    display: block;
+    font-size: 11px;
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .email-priority-banner strong {
+    font-size: 13.5px;
+    color: #ffffff;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  /* বাকি বাটনগুলো: পিল-শেপড (ক্যাপসুল আকৃতি) */
+  .action-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 13px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .btn-email {
+    background: linear-gradient(135deg, #4a148c, #7b1fa2);
+    color: #ffffff;
+    border: 1px solid #ffd700;
+    box-shadow: 0 4px 15px rgba(123, 31, 162, 0.45);
+  }
+
+  .btn-blogger {
+    background: linear-gradient(135deg, #bf360c, #e65100);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .btn-music {
+    background: linear-gradient(135deg, #2e1a47, #4527a0);
+    color: #ffd700;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+  }
+
+  .btn-back {
+    background: linear-gradient(135deg, #2c223d, #1c1429);
+    color: #ffffff;
+    border: 1px solid #b44cff;
+    margin-top: 18px;
+    box-shadow: 0 0 12px rgba(180, 76, 255, 0.4);
+  }
+
+  .action-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 240, 250, 0.45), transparent);
+    transform: skewX(-25deg);
+    animation: lightSweep 3.5s infinite;
+  }
+
+  @keyframes lightSweep {
+    0% { left: -100%; }
+    50% { left: 150%; }
+    100% { left: 150%; }
+  }
+
+  /* মিউজিক ড্রয়ার (রয়্যাল বেগুনি বর্ডার আভাযুক্ত) */
+  .music-drawer {
+    background: rgba(18, 12, 28, 0.92);
+    border: 1px solid rgba(180, 76, 255, 0.5);
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 18px;
+    box-shadow: inset 0 0 12px rgba(157, 78, 221, 0.2);
+  }
+
+  .music-drawer h3 {
+    font-size: 13.5px;
+    color: #ffd700;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .track-item {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+  }
+
+  .track-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .track-title {
+    display: block;
+    font-size: 12.5px;
+    color: #e0b0ff;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  .track-item audio {
+    width: 100%;
+    height: 34px;
+    border-radius: 20px;
+  }
+
+  .bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(180, 76, 255, 0.35);
+    border-radius: 14px;
+    padding: 12px;
+  }
+
+  .secondary-contacts {
+    font-size: 11.5px;
+    color: #d1d1d1;
+    line-height: 1.5;
+  }
+
+  .secondary-contacts .note {
+    display: block;
+    font-size: 10px;
+    color: #ffd700;
+    margin-bottom: 4px;
+  }
+
+  .qr-box {
+    width: 72px;
+    height: 72px;
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .qr-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .footer-mark {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 10.5px;
+    color: #bdbdbd;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="card-wrapper">
+  <!-- পিওর CSS পেজ পরিবর্তনকারী সুইচ -->
+  <input type="checkbox" id="pageSwitch">
+
+  <!-- পেজ ১: মূল কার্ড -->
+  <div class="main-page">
+    <div class="exclusive-tag">✦ Exclusive Global Digital Card ✦</div>
+
+    <div class="profile-header">
+      <div class="photo-box">
+        <img src="https://postimg.cc" alt="Mr. Asim Krishna Roy">
+      </div>
+      <div class="info-box">
+        <h1>Mr. Asim Krishna Roy</h1>
+        <div class="designation">Online Global Marketing Specialist</div>
+        <div class="location">Purba Medinipur, WB, India - 721658</div>
+      </div>
+    </div>
+
+    <div class="shifted-controls">
+      <div class="email-priority-banner">
+        <span>★ Primary & Main Contact Method ★</span>
+        <strong>asimkroy43@gmail.com</strong>
+      </div>
+
+      <div class="btn-group">
+        <a href="mailto:asimkroy43@gmail.com" class="action-btn btn-email">
+          ✉️ Email Me (Main Contact)
+        </a>
+
+        <a href="https://blogger.com" target="_blank" class="action-btn btn-blogger">
+          🌐 Visit My Official Blogger
+        </a>
+
+        <label for="pageSwitch" class="action-btn btn-music">
+          🎵 Exclusive Relaxing Music List
+        </label>
+      </div>
+    </div>
+
+    <div class="footer-mark">✦ Crafted for Global Excellence ✦</div>
+  </div>
+
+  <!-- পেজ ২: মিউজিক ও কন্টাক্ট পেজ -->
+  <div class="music-page">
+    <div class="exclusive-tag">✦ Spiritual Music & Quick Connect ✦</div>
+
+    <div class="music-drawer">
+      <h3>✦ The Symphony of Life - Spiritual & Relaxing ✦</h3>
+      
+      <div class="track-item">
+        <span class="track-title">1. Peaceful Meditation Track</span>
+        <audio controls preload="metadata">
+          <source src="music1.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track-item">
+        <span class="track-title">2. Spiritual Relaxing Vibe</span>
+        <audio controls preload="metadata">
+          <source src="music2.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+
+    <div class="bottom-section">
+      <div class="secondary-contacts">
+        <span class="note">*For Direct Communication, Please Use Email</span>
+        <div>Alt. Ref 1: +91 9775116933</div>
+        <div>Alt. Ref 2: +91 7063320748</div>
+      </div>
+      <div class="qr-box">
+        <img src="https://postimg.cc" alt="QR Code">
+      </div>
+    </div>
+
+    <label for="pageSwitch" class="action-btn btn-back">
+      ← Back to Main Digital Card
+    </label>
+
+    <div class="footer-mark">✦ Crafted for Global Excellence ✦</div>
+  </div>
+</div>
+
+</body>
+</html>
